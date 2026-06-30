@@ -5,5 +5,6 @@ module org.everaldo.workshopjavafxjdbc {
 
 
     opens org.everaldo.workshopjavafxjdbc to javafx.fxml;
+    opens model.entities to javafx.base;
     exports org.everaldo.workshopjavafxjdbc;
 }
