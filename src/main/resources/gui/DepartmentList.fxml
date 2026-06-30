@@ -8,24 +8,47 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
+<VBox prefHeight="400.0"
+      prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.everaldo.workshopjavafxjdbc.DepartmentListController">
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label text="Label">
-         <padding>
-            <Insets left="5.0" top="5.0" />
-         </padding>
-      </Label>
-      <ToolBar prefHeight="40.0" prefWidth="200.0">
-        <items>
-          <Button mnemonicParsing="false" text="New" />
-        </items>
-      </ToolBar>
-      <TableView prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Id" />
-          <TableColumn prefWidth="75.0" text="Name" />
-        </columns>
-      </TableView>
-   </children>
+    <children>
+
+        <Label text="Department">
+            <padding>
+                <Insets top="5.0" left="5.0"/>
+            </padding>
+        </Label>
+
+        <ToolBar>
+            <items>
+                <Button fx:id="btNew"
+                        text="New"
+                        onAction="#onBtNewAction"/>
+            </items>
+        </ToolBar>
+
+        <TableView fx:id="tableViewDepartment"
+                   prefHeight="200.0"
+                   prefWidth="600.0"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="tableColumnId"
+                             text="Id"
+                             prefWidth="100.0"/>
+
+                <TableColumn fx:id="tableColumnName"
+                             text="Name"
+                             prefWidth="480.0"/>
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
 </VBox>
